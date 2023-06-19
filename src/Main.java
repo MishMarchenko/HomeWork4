@@ -21,20 +21,6 @@ public class Main {
             System.out.println("Sorry, I have only two types of tasks)");
         }
     }
-    public static void palindrome(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hello! I can check if a word is a palindrome!");
-        System.out.println("Add a word, please");
-        String str = scanner.nextLine();
-        StringBuilder word = new StringBuilder(str);
-        word.reverse();
-        String str2 = word.toString();
-        if(str.equalsIgnoreCase(str2)){
-            System.out.println("Is palindrome");
-        }else {
-            System.out.println("Is not palindrome");
-        }
-    }
     public static void firstPart(){
         System.out.println("Welcome to work with Strings");
         String str = "Hello";
@@ -64,5 +50,19 @@ public class Main {
         Pattern pattern = Pattern.compile("^((\\+380)([0-9]{9}))$");
         Matcher matcher = pattern.matcher(target);
         return matcher.matches();
+    }
+    public static void palindrome(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello! I can check if a word is a palindrome!");
+        System.out.println("Add a word, please");
+        String str = scanner.nextLine();
+        StringBuilder word = new StringBuilder(str);
+        word.reverse();
+        String str2 = word.toString();
+        if(str.equalsIgnoreCase(str2)){
+            System.out.println("Is palindrome");
+        }else {
+            System.out.println("Is not palindrome");
+        }
     }
 }
